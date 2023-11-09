@@ -14,15 +14,15 @@ const client = new Client(
 client.login(process.env.TOKEN);
 const roles = [
     {
-        id: '1172146920643366984',
+        id: process.env.RED_TOKEN,
         label: 'Red',
     },
     {
-        id: '1172146750597894166',
+        id: process.env.BLUE_TOKEN,
         label: 'Blue',
     },
     {
-        id: '1172146857875611719',
+        id: process.env.GREEN_TOKEN,
         label: 'Green',
     },
 ]
