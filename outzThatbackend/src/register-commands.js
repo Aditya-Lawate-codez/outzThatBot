@@ -47,6 +47,10 @@ const commands = [
     {
         name: 'embed',
         description: 'sends an Embed!'
+    },
+    {
+        name:'cric',
+        description:'Sends Cricket Updates'
     }
 
 ];
