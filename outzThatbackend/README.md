@@ -16,5 +16,5 @@ Yet to implement:
 
 --- 
 <p align="center">
-Made with 💗 by <a href = "https://linkedin.com/in/aditya-lawate">Aditya Lawate </a>
+Made with 💗 by <a href = "https://linkedin.com/in/aditya-lawate"  target = "_blank" >Aditya Lawate </a>
 </p>
