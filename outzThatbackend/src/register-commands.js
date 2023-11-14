@@ -35,7 +35,7 @@ const commands = [
             }
         ],
 
-    }, 
+    },
     {
         name: 'hey',
         description: 'Hey Hi!'
@@ -49,9 +49,13 @@ const commands = [
         description: 'sends an Embed!'
     },
     {
-        name:'cric',
-        description:'Sends Cricket Updates'
-    }
+        name: 'cric',
+        description: 'Sends Cricket Updates'
+    },
+    {
+        name: 'role',
+        description: 'Add roles!'
+    },
 
 ];
 

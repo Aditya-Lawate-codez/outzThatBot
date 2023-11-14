@@ -21,11 +21,12 @@ client.on('messageCreate',
     (message) => {
         if (message.author.bot)
             return;
-        if (message.content === 'Hi') {
-            message.reply('Hi')
+        if (message.content.toLocaleLowerCase() == 'hi') {
+            message.reply(`Hi <@${message.author.id}>`);
         }
-        else if (message.content === 'How are you?') {
-            message.reply('Hi, Im good')
+        else if (message.content.toLocaleLowerCase() === 'how are you?') {
+            message.reply(`Hi, Im good, what about you ${message.member.user} ?`)
+
         }
     }
 )

@@ -28,7 +28,7 @@ const roles = [
 ]
 client.on('ready', async (c) => {
     try {
-        const channel = await client.channels.cache.get('1171787480710774898')
+        const channel = await client.channels.cache.get(process.env.CHANNEL_ID)
         if (!channel) return;
 
 
