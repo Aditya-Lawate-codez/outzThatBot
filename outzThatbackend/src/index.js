@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { Client, IntentsBitField, EmbedBuilder } = require('discord.js')
+const { InviteGuild, Client, IntentsBitField, EmbedBuilder } = require('discord.js')
 
 const client = new Client(
     {
@@ -26,7 +26,17 @@ client.on('messageCreate',
         }
         else if (message.content.toLocaleLowerCase() === 'how are you?') {
             message.reply(`Hi, Im good, what about you ${message.member.user} ?`)
-
+        }
+        if (message.content.toLocaleLowerCase().match("invite")) {
+            message.channel
+                .createInvite({ unique: true })
+                .then((invite) => {
+                    message.reply(`Here's your invite link: ${invite.url}`);
+                })
+                .catch((error) => {
+                    console.error('Error creating invite:', error);
+                    message.reply('Oops! Something went wrong.');
+                });
         }
     }
 )
@@ -88,7 +98,24 @@ client.on('interactionCreate', async (interaction) => {
             const cric = new EmbedBuilder().setTitle("Cricket Updates").setColor("#000000").setDescription("CricketScore!!!")
             interaction.reply({ embeds: [cric] })
             break;
+        case 'invite':
+            interaction.reply("Link done")
+            // Generate an invite link and send it back to the user
 
+            // let inv = InviteGuild;
+            // InviteGuild.
+            // inv.arguments(InviteGuild)
+
+            function createlink(chan, guild, message) {
+                let invite = chan.createinvite().catch(console.error);
+                try {
+                    interaction.reply(guild.name + '|' + invite);
+                } catch (e) {
+                    interaction.reply(guild.name + '|' + 'no link available');
+                }
+            }
+            // invite = interaction.con
+            interaction.reply(`created invite link: ${link}`)
         default:
             break;
     }

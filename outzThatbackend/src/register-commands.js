@@ -2,6 +2,10 @@ require('dotenv').config();
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
 const commands = [
     {
+        name: 'invite',
+        description:'invite link generate'
+    },
+    {
         // Add command
         name: 'add',
         description: 'adds 2 nums!',
